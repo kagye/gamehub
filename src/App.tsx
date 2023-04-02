@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { Grid, GridItem, Show } from '@chakra-ui/react';
-import React, { useState } from 'react';
 import NavBar from './components/NavBar';
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 

@@ -1,0 +1,12 @@
+.aside-item {
+  padding-bottom: 0.6em;
+}
+.aside-item img {
+  width: 2em;
+  height: 2em;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+.aside-item p :hover {
+  text-decoration: white;
+}

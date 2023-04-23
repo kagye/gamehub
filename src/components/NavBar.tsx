@@ -24,7 +24,11 @@ const NavBar = () => {
           pointerEvents="none"
           children={<Icon boxSize="1em" as={Search2Icon} />}
         />
-        <Input borderRadius="2em" placeholder="Search games..."></Input>
+        <Input
+          variant="filled"
+          borderRadius="2em"
+          placeholder="Search games..."
+        ></Input>
       </InputGroup>
       <ColourModeSwitch />
     </HStack>

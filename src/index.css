@@ -10,3 +10,13 @@
 .aside-item p :hover {
   text-decoration: white;
 }
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+.open option {
+  opacity: 1;
+  transition: opacity 4s ease-in-out;
+  padding-top: 10em;
+}

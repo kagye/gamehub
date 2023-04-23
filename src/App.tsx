@@ -1,9 +1,14 @@
-import { useState } from 'react';
 import { Grid, GridItem, Show } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
+import Aside from './components/Aside';
+import { useState } from 'react';
+import Games from './components/Games';
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [selectedGenre, setSelectedGenre] = useState('');
+  const handleOnGenreSelected = (genre: string) => {
+    setSelectedGenre(genre);
+  };
 
   return (
     <Grid
@@ -11,17 +16,21 @@ const App = () => {
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
       }}
+      gridTemplateColumns={'auto 1fr'}
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" bg="gold">
-          Aside
+        <GridItem area="aside">
+          <Aside
+            onClick={handleOnGenreSelected}
+            selectedGenre={selectedGenre}
+          ></Aside>
         </GridItem>
       </Show>
-      <GridItem area="main" bg="dodgerblue">
-        Main
+      <GridItem area="main">
+        <Games selectedGenre={selectedGenre}></Games>
       </GridItem>
     </Grid>
   );

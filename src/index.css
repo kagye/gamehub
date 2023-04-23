@@ -7,16 +7,10 @@
   object-fit: cover;
   border-radius: 0.5em;
 }
-.aside-item p :hover {
+p :hover {
   text-decoration: white;
 }
 
 h1 {
   margin-bottom: 0.5em;
-}
-
-.open option {
-  opacity: 1;
-  transition: opacity 4s ease-in-out;
-  padding-top: 10em;
 }
